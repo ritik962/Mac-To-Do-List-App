@@ -1,0 +1,256 @@
+:root {
+  --green-dot: #27c93f;
+  --green-border: #41b042;
+  --yellow-dot: #ffbd2d;
+  --yellow-border: #e1a229;
+  --red-dot: #ff5f57;
+  --red-border: #e34940;
+  --mac-nav: #d9d8d8;
+  --mac-bg: #ececec;
+  --text-color: #4e4f4e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  overflow: hidden;
+}
+
+.mac-wrapper {
+  margin: 2rem auto;
+  /* display: none; */
+  width: 90%;
+  max-width: 500px;
+  height: 90vh;
+  background-color: var(--mac-bg);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid black;
+  transition: max-width 0.5s ease-in-out;
+}
+
+.mac-dots {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--mac-nav);
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 1.225rem;
+}
+
+.red {
+  background-color: var(--red-dot);
+  border: 1px solid var(--red-border);
+}
+.yellow {
+  background-color: var(--yellow-dot);
+  border: 1px solid var(--yellow-border);
+}
+.green {
+  background-color: var(--green-dot);
+  border: 1px solid var(--green-border);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  /* background-color: red; */
+}
+
+.wrapper .heading {
+  font-size: 2.5rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.input-wrapper {
+  height: 60px;
+  flex: 1;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  
+}
+
+.input-wrapper #input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem 4rem 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: transparent;
+  transition: border 0.2s ease-in-out;
+}
+
+#input::placeholder {
+  color: #d3d0d0;
+}
+
+#input:focus {
+  border: 2px solid black;
+}
+
+.input-wrapper i {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  height: 60px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 550;
+  background-color: var(--mac-nav);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #888;
+}
+
+.btn:active {
+  transform: scale(1.05);
+  border: 1.5px solid black;
+}
+
+.task-wrapper {
+  width: 100%;
+  /* background-color: red; */
+  height: 55vh;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.task-container {
+  margin: 10px auto;
+  width: 100%;
+  padding: 0.225rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  border-radius: 10px;
+  background-color: white;
+}
+
+.task-container .task {
+  flex: 1;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 60px;
+  outline: none;
+  border: none;
+  padding: 0 10px 0 0;
+}
+
+.actions .action {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.action:active {
+  background-color: #c3c9c3;
+}
+
+.actions .delete {
+  margin-left: 10px;
+}
+
+.actions .action i {
+  font-size: 2rem;
+  background: transparent;
+}
+
+.app-delete {
+  height: 100vh;
+  display: none;
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; */
+  text-align: center;
+  /* background-color: red; */
+}
+
+@keyframes animateEmoji {
+  0% {
+    height: 200px;
+  }
+  33% {
+    height: 220px;
+  }
+  66% {
+    height: 240px;
+  }
+  100% {
+    height: 260px;
+  }
+}
+.image-wrap {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.animate {
+  animation-name: animateEmoji;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+

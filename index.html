@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mac-wrapper">
+      <div class="mac-dots">
+        <div class="red dot"></div>
+        <div class="yellow dot"></div>
+        <div class="green dot"></div>
+      </div>
+      <div class="wrapper">
+        <h1 class="heading">To Do List App</h1>
+        <form action="">
+          <div class="input-wrapper">
+            <input type="text" placeholder="ADD TASK" id="input" />
+            <i class="bx bx-notepad"></i>
+          </div>
+          <button class="btn" id="btn" type="submit">Add Task</button>
+        </form>
+        <div class="task-wrapper">
+          <!-- <div class="task-container">
+            <input type="text" class="task" readonly />
+            <div class="actions">
+              <button class="action edit">
+                <i class="bx bx-edit"></i>
+              </button>
+              <button class="action delete">
+                <i class="bx bx-x"></i>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="app-delete">
+      <div class="image-wrap">
+        <img src="./assets/8179471.webp" alt="" class="animate" />
+      </div>
+      <div class="after-delete-message">
+        <h2 class="message">Opps! You deleted your app</h2>
+        <p class="note">
+          Double click on the emoji above to bring your app back.
+        </p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
